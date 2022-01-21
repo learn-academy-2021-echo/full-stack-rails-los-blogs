@@ -1,0 +1,9 @@
+<h1>You are in the Home Page</h1>
+
+<ul>
+<% @blogs.each do |value|%>
+<li><%=link_to value.title, blogs_path(value) %></li>
+<% end %>
+</ul>
+
+<p><%= link_to 'Create New Blog', new_blog_path %></p>
